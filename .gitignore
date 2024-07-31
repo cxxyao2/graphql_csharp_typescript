@@ -1,0 +1,17 @@
+# dependencies
+bin
+obj
+
+# production
+build
+wwwroot
+
+
+# secrets
+dailyreport.*
+test*.js
+test*.md
+todo*.*
+
+# databases
+*.db
