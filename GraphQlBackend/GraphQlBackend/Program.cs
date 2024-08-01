@@ -1,6 +1,7 @@
 using FirebaseAdmin;
 using FirebaseAdminAuthentication.DependencyInjection.Extensions;
 using FirebaseAdminAuthentication.DependencyInjection.Models;
+using Google.Apis.Auth.OAuth2;
 using GraphQlBackend.Data;
 using GraphQlBackend.Schema;
 using GraphQlBackend.Services;
@@ -12,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContextFactory<OMAContext>(options =>
 {
-    options.UseSqlite(builder.Configuration["ConnectionStrings:DefaultConnection"]);
+    options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
 });
 
 builder.Services.AddScoped<ICustomerService, CustomerService>();
@@ -46,11 +47,14 @@ builder.Services
 
 
 
-builder.Services.AddSingleton(FirebaseApp.Create());
+builder.Services.AddSingleton(FirebaseApp.Create(new AppOptions()
+{
+    Credential = GoogleCredential.FromFile(builder.Configuration["FIREBASE_CONFIG_PATH"])
+}));
 builder.Services.AddFirebaseAuthentication();
 builder.Services.AddAuthorization(
     o => o.AddPolicy("IsAdmin",
-      p => p.RequireClaim(FirebaseUserClaimType.EMAIL,"cxxyao2@gmail.com")
+      p => p.RequireClaim(FirebaseUserClaimType.EMAIL, "cxxyao2@gmail.com")
     ));
 
 var app = builder.Build();
