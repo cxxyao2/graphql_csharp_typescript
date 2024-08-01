@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\graphqlbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\graphqlbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -86,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,7 +110,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Dockerfile",
+              "RelativeDocumentMoniker": "GraphQlBackend\\Dockerfile",
+              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Dockerfile",
+              "RelativeToolTip": "GraphQlBackend\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-01T04:40:20.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "firebase-config.json",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\firebase-config.json",
               "RelativeDocumentMoniker": "GraphQlBackend\\firebase-config.json",
@@ -118,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Program.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Program.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\appsettings.json",
               "RelativeDocumentMoniker": "GraphQlBackend\\appsettings.json",
@@ -138,12 +155,11 @@
               "RelativeToolTip": "GraphQlBackend\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-31T21:18:08.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T21:18:08.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Mutation.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Schema\\Mutation.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Schema\\Mutation.cs",
@@ -155,31 +171,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GraphQlBackend.csproj",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\GraphQlBackend.csproj",
               "RelativeDocumentMoniker": "GraphQlBackend\\GraphQlBackend.csproj",
               "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\GraphQlBackend.csproj",
               "RelativeToolTip": "GraphQlBackend\\GraphQlBackend.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-07-31T20:07:21.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "GraphQlBackend",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\GraphQlBackend.csproj",
               "RelativeDocumentMoniker": "GraphQlBackend\\GraphQlBackend.csproj",
               "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\GraphQlBackend.csproj",
               "RelativeToolTip": "GraphQlBackend\\GraphQlBackend.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-07-31T20:33:06.354Z"
+              "WhenOpened": "2024-07-31T20:33:06.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "GraphQlBackend\\Properties\\launchSettings.json",
@@ -191,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "OMAContext.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Data\\OMAContext.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Data\\OMAContext.cs",
@@ -199,12 +216,11 @@
               "RelativeToolTip": "GraphQlBackend\\Data\\OMAContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T21:09:28.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T21:09:28.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\Order.cs",
@@ -216,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Query.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Schema\\Query.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Schema\\Query.cs",
@@ -228,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "OrderModel.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\DTOs\\OrderModel.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\DTOs\\OrderModel.cs",
@@ -240,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CustomerModel.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\DTOs\\CustomerModel.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\DTOs\\CustomerModel.cs",
@@ -252,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Services\\IOrderService.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Services\\IOrderService.cs",
@@ -264,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Services\\OrderService.cs",
@@ -276,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\Customer.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\Customer.cs",
@@ -288,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Services\\CustomerService.cs",
@@ -300,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ICustomerService.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Services\\ICustomerService.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Services\\ICustomerService.cs",
@@ -312,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Status.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Status.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Enums\\Status.cs",
@@ -324,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\Address.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\Address.cs",
