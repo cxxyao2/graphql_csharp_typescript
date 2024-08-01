@@ -12,6 +12,8 @@ dailyreport.*
 test*.js
 test*.md
 todo*.*
+firebase-config.json
+firebase-screen*.*
 
 # databases
 *.db

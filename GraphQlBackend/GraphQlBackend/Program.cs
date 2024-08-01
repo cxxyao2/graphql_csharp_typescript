@@ -1,3 +1,6 @@
+using FirebaseAdmin;
+using FirebaseAdminAuthentication.DependencyInjection.Extensions;
+using FirebaseAdminAuthentication.DependencyInjection.Models;
 using GraphQlBackend.Data;
 using GraphQlBackend.Schema;
 using GraphQlBackend.Services;
@@ -38,13 +41,25 @@ builder.Services
     .AddMutationType<Mutation>()
     .AddFiltering()
     .AddSorting()
-    .AddProjections();
+    .AddProjections()
+    .AddAuthorization();
+
+
+
+builder.Services.AddSingleton(FirebaseApp.Create());
+builder.Services.AddFirebaseAuthentication();
+builder.Services.AddAuthorization(
+    o => o.AddPolicy("IsAdmin",
+      p => p.RequireClaim(FirebaseUserClaimType.EMAIL,"cxxyao2@gmail.com")
+    ));
 
 var app = builder.Build();
 
 
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.MapGraphQL();
 
