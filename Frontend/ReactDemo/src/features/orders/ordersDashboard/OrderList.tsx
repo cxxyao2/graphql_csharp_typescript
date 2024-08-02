@@ -1,17 +1,38 @@
-import  { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import { AgGridReact } from 'ag-grid-react'
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
 import { IconButton } from '@mui/material'
 import LaunchIcon from '@mui/icons-material/Launch'
 import { Customer, Order } from '../../../types/Nonconstants'
-
+import { useQuery } from '@apollo/client'
+import OmLoading from '../../../components/elements/OmLoading'
+import OmAlert from '../../../components/elements/OmAlert'
+import { GetOrdersWithPageInfoQuery } from '../../../graphql/queries/GetOrdersWithPageInfo'
 
 interface OrderListProps {
-	orders:Array<Order> | undefined
+	pageSize: number
+	skip: number
 }
 
-export default function OrderList({ orders }: OrderListProps) {
+export default function OrderList({ pageSize, skip }: OrderListProps) {
+	const navigate = useNavigate()
+
+	const {
+		loading,
+		error,
+		data: ordersData
+	} = useQuery(GetOrdersWithPageInfoQuery, {
+		variables: {
+			take: pageSize,
+			skip: skip
+		}
+	})
+
+
+
 	const [columnDefs] = useState([
 		{
 			field: 'id',
@@ -19,8 +40,7 @@ export default function OrderList({ orders }: OrderListProps) {
 			suppressSizeToFit: true,
 			cellRenderer: function (params: any) {
 				return (
-					<IconButton
-						onClick={() => window.open(`/orders/${params.value}`, '_blank')}>
+					<IconButton onClick={() => navigate(`/orders/${params.value}`)}>
 						<LaunchIcon fontSize='small' color='secondary' />
 					</IconButton>
 				)
@@ -45,6 +65,18 @@ export default function OrderList({ orders }: OrderListProps) {
 		}),
 		[]
 	)
+
+
+	if (loading) {
+		return <OmLoading />
+	}
+
+	if (error || !ordersData) {
+		return <OmAlert message='Could not load orders data' />
+	}
+
+	const orders = ordersData?.offsetOrders.items as Order[]
+
 
 	return (
 		<div className='ag-theme-alpine' style={{ height: 500, width: '100%' }}>

@@ -9,7 +9,7 @@ namespace GraphQlBackend.Schema
 {
     public class Mutation
     {
-        [Authorize]
+      
         public async Task<Customer> AddOrUpdateCustomer([Service] ICustomerService customerService, CustomerModel customer,ClaimsPrincipal claimsPrincipal)
         {
             string userId = claimsPrincipal.FindFirstValue(FirebaseUserClaimType.ID);
@@ -19,7 +19,7 @@ namespace GraphQlBackend.Schema
 
             return await customerService.AddOrUpdateCustomerAsync(customer);
         }
-        [Authorize]
+       
         public async Task<Order> AddOrUpdateOrder([Service] IOrderService orderService, OrderModel order)
         {
             return await orderService.AddOrUpdateOrderAsync(order);
@@ -29,7 +29,7 @@ namespace GraphQlBackend.Schema
         {
             return await customerService.DeleteCustomerAsync(customerId);
         }
-        [Authorize(Policy ="IsAdmin")]
+  
         public async Task<bool> DeleteOrder([Service] IOrderService orderService, int orderId)
         {
             return await orderService.DeleteOrderAsync(orderId);

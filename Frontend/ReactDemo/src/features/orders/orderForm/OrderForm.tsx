@@ -57,7 +57,7 @@ export default function OrderForm({ order }: OrderFormProps) {
 		otherNotes: order.otherNotes,
 		totalAmount: order.totalAmount,
 		isDelivery: true,
-		status: Status.DRAFT
+		status: order.status
 	}
 
 	const [
@@ -70,16 +70,11 @@ export default function OrderForm({ order }: OrderFormProps) {
 	}
 
 	async function addOrUpdateOrderDetails(values: any) {
-		// map string to enum
-		// State[str as keyof typeof State];
-
 		const newValues = values as OrderModelInput
 		newValues.id = orderId
 		newValues.customerId = customerId
-		newValues.status = Status.COMPLETED
+		newValues.status = values.status
 		newValues.orderDate = newDate?.toDate() || new Date()
-
-		console.log('new values are ', newValues)
 
 		const response = await addOrUpdateOrder({
 			variables: {

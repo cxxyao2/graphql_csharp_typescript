@@ -1,33 +1,35 @@
-import {gql} from '@apollo/client'
+import { gql } from '@apollo/client'
 
 export const GetCustomerByIdQuery = gql`
 	query GetCustomerById($id: Int!) {
 		customers(where: { id: { eq: $id } }) {
-			id
-			firstName
-			lastName
-			contactNumber
-			email
-			address {
-				addressLine1
-				addressLine2
-				city
-				state
-				country
-			}
-			orders {
+			nodes {
 				id
-				orderDate
-				description
-				totalAmount
-				depositAmount
-				isDelivery
-				status
-				otherNotes
-				customer {
+				firstName
+				lastName
+				contactNumber
+				email
+				address {
+					addressLine1
+					addressLine2
+					city
+					state
+					country
+				}
+				orders {
 					id
-					firstName
-					lastName
+					orderDate
+					description
+					totalAmount
+					depositAmount
+					isDelivery
+					status
+					otherNotes
+					customer {
+						id
+						firstName
+						lastName
+					}
 				}
 			}
 		}

@@ -17,7 +17,7 @@ export default function CustomersDashboard() {
 		return <OmAlert message='Could not load customers data' />
 	}
 
-	const customers = customersData.customers as Customer[]
+	const customers = customersData.customers.nodes as Customer[]
 
 	return (
 		<Grid container spacing={2}>

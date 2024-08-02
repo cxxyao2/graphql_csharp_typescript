@@ -65,7 +65,7 @@ export default function OrderPage() {
 			return <OmAlert message='Error deleting order data' />
 		}
 
-	const order = orderData.orders[0] as Order
+	const order = orderData.orders.nodes[0] as Order
 	const customer = order.customer as Customer
 
 	return (

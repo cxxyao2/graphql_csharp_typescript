@@ -75,7 +75,7 @@ export default function CustomerPage() {
 		return <OmAlert message='Error deleting customer data' />
 	}
 
-	const customer = customerData.customers[0] as Customer
+	const customer = customerData.customers.nodes[0] as Customer
 	return (
 		<Container>
 			<Dialog

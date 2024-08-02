@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 import OmGrid from '../../../components/elements/OmGrid'
@@ -11,6 +12,8 @@ interface CustomerListProps {
 }
 
 export default function CustomerList({ customers }: CustomerListProps) {
+	const navigate = useNavigate()
+
 	const [columnDefs] = useState([
 		{
 			field: 'id',
@@ -19,7 +22,7 @@ export default function CustomerList({ customers }: CustomerListProps) {
 			cellRenderer: function (params: any) {
 				return (
 					<IconButton
-						onClick={() => window.open(`/customers/${params.value}`, '_black')}>
+						onClick={() => navigate(`/customers/${params.value}`)}>
 						<LaunchIcon fontSize='small' color='secondary' />
 					</IconButton>
 				)

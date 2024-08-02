@@ -1,9 +1,9 @@
 import { gql } from '@apollo/client'
 
-export const GetOrderByIdQuery = gql`
-	query GetOrderById($id: Int!) {
-		orders(where: { id: { eq: $id } }) {
-			nodes {
+export const GetOrdersWithPageInfoQuery = gql`
+	query GetOffsetOrders($take:Int!, $skip:Int!) {
+		offsetOrders(take: $take, skip: $skip) {
+			items {
 				id
 				orderDate
 				description

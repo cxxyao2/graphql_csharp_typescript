@@ -1,22 +1,35 @@
 import { Grid, Typography } from '@mui/material'
 import OrderList from './OrderList'
-import OmLoading from '../../../components/elements/OmLoading'
-import OmAlert from '../../../components/elements/OmAlert'
-import { GetOrdersQuery } from '../../../graphql/queries/GetOrders'
+
+import TablePagination from '@mui/material/TablePagination'
+import { useState, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
-import { Order } from '../../../types/Nonconstants'
+import { GetOrdersQuery } from '../../../graphql/queries/GetOrders'
 
 export default function OrdersDashboard() {
-	const { loading, error, data: ordersData } = useQuery(GetOrdersQuery)
-	if (loading) {
-		return <OmLoading />
+	const [page, setPage] = useState(2)
+	const [rowsPerPage, setRowsPerPage] = useState(10)
+	const [totalCount, setTotalCount] = useState(100)
+
+	const { data: allOrdersData } = useQuery(GetOrdersQuery)
+
+	useEffect(() => {
+		setTotalCount(allOrdersData?.orders.totalCount)
+	}, [allOrdersData])
+
+	const handleChangePage = (
+		event: React.MouseEvent<HTMLButtonElement> | null,
+		newPage: number
+	) => {
+		setPage(newPage)
 	}
 
-	if (error || !ordersData) {
-		return <OmAlert message='Could not load orders data' />
+	const handleChangeRowsPerPage = (
+		event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		setRowsPerPage(parseInt(event.target.value, 10))
+		setPage(0)
 	}
-
-	const orders = ordersData?.orders as Order[]
 
 	return (
 		<Grid container spacing={2}>
@@ -31,7 +44,15 @@ export default function OrdersDashboard() {
 				</Typography>
 			</Grid>
 			<Grid item xs={12}>
-				<OrderList orders={orders} />
+				<TablePagination
+					component='div'
+					count={totalCount}
+					page={page}
+					onPageChange={handleChangePage}
+					rowsPerPage={rowsPerPage}
+					onRowsPerPageChange={handleChangeRowsPerPage}
+				/>
+				<OrderList pageSize={rowsPerPage} skip={rowsPerPage * page} />
 			</Grid>
 		</Grid>
 	)

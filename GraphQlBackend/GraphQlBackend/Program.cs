@@ -60,7 +60,7 @@ builder.Services.AddAuthorization(
 var app = builder.Build();
 
 
-
+app.UseCors(AllowSpecificOrigins);
 app.UseRouting();
 
 app.UseAuthentication();

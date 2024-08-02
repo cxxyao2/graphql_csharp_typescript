@@ -5,8 +5,10 @@ namespace GraphQlBackend.Schema
 {
     public class Query
     {
-        [UsePaging]
+        [UsePaging(DefaultPageSize = 10, IncludeTotalCount = true)]
+        [UseProjection]
         [UseFiltering]
+        [UseSorting]
         public IQueryable<Customer> GetCustomers([Service] ICustomerService customerService)
         {
             return customerService.GetCustomersAndOrders();
@@ -22,6 +24,9 @@ namespace GraphQlBackend.Schema
         }
 
         [UseOffsetPaging(DefaultPageSize = 10, IncludeTotalCount = true)]
+        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
         public IQueryable<Order> GetOffsetOrders([Service] IOrderService orderService)
         {
             return orderService.GetOrders();
