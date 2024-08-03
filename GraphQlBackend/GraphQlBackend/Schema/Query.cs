@@ -1,8 +1,10 @@
 ﻿using GraphQlBackend.Entities;
 using GraphQlBackend.Services;
+using HotChocolate.Authorization;
 
 namespace GraphQlBackend.Schema
 {
+    [Authorize]
     public class Query
     {
         [UsePaging(DefaultPageSize = 10, IncludeTotalCount = true)]
@@ -14,6 +16,7 @@ namespace GraphQlBackend.Schema
             return customerService.GetCustomersAndOrders();
         }
 
+        
         [UsePaging(DefaultPageSize = 10, IncludeTotalCount = true)]
         [UseProjection]
         [UseFiltering]
