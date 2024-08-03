@@ -2,10 +2,12 @@
 {
     public enum Status
     {
-        PENDING,
-        DRAFT,
-        COMPLETED,
-        SHIPPED
+        Pending,
+        Draft,
+        Completed,
+        Shipped
 
     }
+
+
 }

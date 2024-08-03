@@ -1,39 +1,64 @@
-using FirebaseAdmin;
-using FirebaseAdminAuthentication.DependencyInjection.Extensions;
-using FirebaseAdminAuthentication.DependencyInjection.Models;
-using Google.Apis.Auth.OAuth2;
+using System.Text;
 using GraphQlBackend.Data;
 using GraphQlBackend.Schema;
 using GraphQlBackend.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var AllowSpecificOrigins = "_allowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddHttpContextAccessor();
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               .AddJwtBearer(options =>
+               {
+                   options.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateIssuerSigningKey = true,
+                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.
+                           GetBytes(builder.Configuration.GetSection("Secrets:Token").Value)),
+                       ValidateIssuer = false,
+                       ValidateAudience = false,
+                   };
+               });
+
+
+
 // Add services to the container.
-builder.Services.AddDbContextFactory<OMAContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
-});
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 
-// cors
+// Cors
+// Read the CORS origins from environment variables
+var originsString = builder.Configuration["Cors:AllowedOrigins"];
+var allowedOrigins = originsString?.Trim().TrimStart('[').TrimEnd(']').Split(',')
+                           .Select(origin => origin.Trim('"')).ToArray();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: AllowSpecificOrigins,
         policy =>
         {
-            policy.AllowAnyOrigin()
+            policy.WithOrigins(allowedOrigins)
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         }
     );
 });
-
-
 
 // graphql
 builder.Services
@@ -46,38 +71,31 @@ builder.Services
     .AddAuthorization();
 
 
-
-builder.Services.AddSingleton(FirebaseApp.Create(new AppOptions()
-{
-    Credential = GoogleCredential.FromFile(builder.Configuration["FIREBASE_CONFIG_PATH"])
-}));
-builder.Services.AddFirebaseAuthentication();
-builder.Services.AddAuthorization(
-    o => o.AddPolicy("IsAdmin",
-      p => p.RequireClaim(FirebaseUserClaimType.EMAIL, "cxxyao2@gmail.com")
-    ));
-
 var app = builder.Build();
-
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "GraphQL Server v1");
+        c.RoutePrefix = string.Empty;
+    });
+}
 
 app.UseCors(AllowSpecificOrigins);
+app.UseHttpsRedirection();
+
+
+
 app.UseRouting();
 
 app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.MapGraphQL();
 
-
-try
-{
-    var scope = app.Services.CreateScope();
-    var context = scope.ServiceProvider.GetRequiredService<OMAContext>();
-    context.Database.Migrate();
-}
-catch (Exception ex)
-{
-    var logger = app.Services.GetRequiredService<ILogger<Program>>();
-    logger.LogError(ex, "An error occured during migration");
-}
 
 app.Run();

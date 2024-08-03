@@ -8,15 +8,18 @@ namespace GraphQlBackend.Services
 
     public class CustomerService : ICustomerService
     {
-        private readonly IDbContextFactory<OMAContext> _contextFactory;
-        public CustomerService(IDbContextFactory<OMAContext> contextFactory)
+
+        private readonly DataContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public CustomerService(DataContext context, IHttpContextAccessor httpContextAccessor)
         {
-            _contextFactory = contextFactory;
+            _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<Customer> AddOrUpdateCustomerAsync(CustomerModel customerModel)
         {
-            var context = _contextFactory.CreateDbContext();
             Customer? customer;
 
             if (customerModel.Id == null)
@@ -37,11 +40,11 @@ namespace GraphQlBackend.Services
                     }
                 };
 
-                await context.Customers.AddAsync(customer);
+                await _context.Customers.AddAsync(customer);
             }
             else
             {
-                customer = await context.Customers
+                customer = await _context.Customers
                             .Where(c => c.Id == customerModel.Id)
                             .Include(c => c.Address)
                             .FirstOrDefaultAsync();
@@ -59,20 +62,19 @@ namespace GraphQlBackend.Services
                 customer.Address.State = customerModel.State;
                 customer.Address.Country = customerModel.Country;
 
-                context.Customers.Update(customer);
+                _context.Customers.Update(customer);
             }
 
-            await context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             return customer;
         }
 
         public IQueryable<Customer> GetCustomersAndOrders()
         {
-            var context = _contextFactory.CreateDbContext();
-            context.Database.EnsureCreated();
 
-            return context.Customers
+
+            return _context.Customers
                     .Where(c => !c.IsDeleted)
                     .Include(c => c.Orders.Where(o => !o.IsDeleted))
                     .Include(c => c.Address);
@@ -81,9 +83,7 @@ namespace GraphQlBackend.Services
 
         public async Task<bool> DeleteCustomerAsync(int customerId)
         {
-            var context = _contextFactory.CreateDbContext();
-
-            var customer = await context.Customers
+            var customer = await _context.Customers
                                 .Where(c => c.Id == customerId)
                                 .FirstOrDefaultAsync();
 
@@ -94,7 +94,7 @@ namespace GraphQlBackend.Services
 
             customer.IsDeleted = true;
 
-            var orders = await context.Orders
+            var orders = await _context.Orders
                             .Where(o => o.CustomerId == customerId)
                             .ToListAsync();
 
@@ -103,10 +103,10 @@ namespace GraphQlBackend.Services
                 order.IsDeleted = true;
             }
 
-            context.Customers.Update(customer);
-            context.Orders.UpdateRange(orders);
+            _context.Customers.Update(customer);
+            _context.Orders.UpdateRange(orders);
 
-            return await context.SaveChangesAsync() > 0;
+            return await _context.SaveChangesAsync() > 0;
 
         }
     }

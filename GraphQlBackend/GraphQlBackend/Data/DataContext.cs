@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GraphQlBackend.Data
 {
-    public class OMAContext : DbContext
+    public class DataContext : DbContext
     {
-
-
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Address> Addresses { get; set; }
 
-        public OMAContext(DbContextOptions options) : base(options)
+        public DbSet<User> Users { get; set; }
+
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
         }
@@ -74,7 +74,7 @@ namespace GraphQlBackend.Data
                     TotalAmount = 500,
                     DepositAmount = 10,
                     IsDelivery = true,
-                    Status = Status.PENDING,
+                    Status = Status.Pending,
                     OtherNotes = "Something new",
                     IsDeleted = false,
 
@@ -88,7 +88,7 @@ namespace GraphQlBackend.Data
                        TotalAmount = 5000,
                        DepositAmount = 250,
                        IsDelivery = false,
-                       Status = Status.DRAFT,
+                       Status = Status.Draft,
                        OtherNotes = "Something new again",
                        IsDeleted = false,
 
