@@ -45,34 +45,19 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 // Cors
 // Read the CORS origins from environment variables
 var originsString = builder.Configuration["Cors:AllowedOrigins"];
-var allowedOrigins = originsString?.Trim().TrimStart('[').TrimEnd(']').Split(',')
-                           .Select(origin => origin.Trim('"')).ToArray();
+var allowedOrigins = originsString?.Split(',');
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: AllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173")
+            policy.WithOrigins(allowedOrigins)
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         }
     );
 });
-
-/*
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: AllowSpecificOrigins,
-        policy =>
-        {
-            policy.AllowAnyOrigin()
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        }
-    );
-});
-*/
 
 // graphql
 builder.Services
