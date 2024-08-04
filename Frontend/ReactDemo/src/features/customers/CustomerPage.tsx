@@ -20,7 +20,8 @@ import { Delete } from '@mui/icons-material'
 import { useMutation, useQuery } from '@apollo/client'
 import { GetCustomerByIdQuery } from '../../graphql/queries/GetCustomerById'
 import { DeleteCustomerMutation } from './../../graphql/mutations/DeleteCustomer'
-import { Customer } from '../../types/Nonconstants'
+import { Customer, Order } from '../../types/Nonconstants'
+import { GetOrdersByCustomerIdQuery } from '../../graphql/queries/GetOrdersByCustomerId'
 
 export default function CustomerPage() {
 	const params = useParams()
@@ -35,6 +36,16 @@ export default function CustomerPage() {
 	} = useQuery(GetCustomerByIdQuery, {
 		variables: {
 			id: customerId
+		}
+	})
+
+	const {
+		data: ordersData,
+		loading: orderLoading,
+		error: orderError
+	} = useQuery(GetOrdersByCustomerIdQuery, {
+		variables: {
+			customerId: customerId
 		}
 	})
 
@@ -63,7 +74,7 @@ export default function CustomerPage() {
 		setOpen(false)
 	}
 
-	if (customerLoading || deleteCustomerLoading) {
+	if (customerLoading || deleteCustomerLoading || orderLoading) {
 		return <OmLoading />
 	}
 
@@ -71,11 +82,17 @@ export default function CustomerPage() {
 		return <OmAlert message='Error retrieving customer data' />
 	}
 
+	if (orderError) {
+		return <OmAlert message='Error retrieving customer"s order data' />
+	}
+
 	if (deleteCustomerError) {
 		return <OmAlert message='Error deleting customer data' />
 	}
 
 	const customer = customerData.customers.nodes[0] as Customer
+	const orders: Order[] = ordersData.orders.nodes
+
 	return (
 		<Container>
 			<Dialog
@@ -120,7 +137,7 @@ export default function CustomerPage() {
 					<OmHeader header='Customer Orders' />
 				</Grid>
 				<Grid item xs={12}>
-					<OrderList orders={customer.orders} />
+					<OrderList orders={orders} />
 				</Grid>
 				<Grid item xs={12}>
 					<Button

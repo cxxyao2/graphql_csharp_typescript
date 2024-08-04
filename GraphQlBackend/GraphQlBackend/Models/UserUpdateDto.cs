@@ -22,7 +22,6 @@ namespace GraphQlBackend.DTOs
         public string? Password { get; set; }
 
 
-        [Compare("Password")]
-        public string? ConfirmPassword { get; set; }
+        
     }
 }

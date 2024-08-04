@@ -1,7 +1,12 @@
 import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
-export default function NavBar() {
+interface NavbarProps {
+	isLoggedIn: boolean
+	userName?: string
+}
+
+export default function NavBar({ isLoggedIn, userName }: NavbarProps) {
 	return (
 		<AppBar position='static'>
 			<Toolbar>
@@ -41,6 +46,25 @@ export default function NavBar() {
 							New Customer
 						</Link>
 					</Button>
+					{isLoggedIn ? (
+						<Button sx={{ my: 2, color: 'white', display: 'block' }}>
+							{' '}
+							{userName}
+						</Button>
+					) : (
+						<>
+							<Button sx={{ my: 2, color: 'white', display: 'block' }}>
+								<Link className='text-link' to='/login'>
+									Login
+								</Link>
+							</Button>
+							<Button sx={{ m: 2, color: 'white', display: 'block' }}>
+								<Link className='text-link' to='/register'>
+									Register
+								</Link>
+							</Button>
+						</>
+					)}
 				</Box>
 			</Toolbar>
 		</AppBar>

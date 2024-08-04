@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { AgGridReact } from 'ag-grid-react'
@@ -7,31 +7,13 @@ import 'ag-grid-community/styles/ag-theme-alpine.css'
 import { IconButton } from '@mui/material'
 import LaunchIcon from '@mui/icons-material/Launch'
 import { Customer, Order } from '../../../types/Nonconstants'
-import { useQuery } from '@apollo/client'
-import OmLoading from '../../../components/elements/OmLoading'
-import OmAlert from '../../../components/elements/OmAlert'
-import { GetOrdersWithPageInfoQuery } from '../../../graphql/queries/GetOrdersWithPageInfo'
 
 interface OrderListProps {
-	pageSize: number
-	skip: number
+	orders: Order[]
 }
 
-export default function OrderList({ pageSize, skip }: OrderListProps) {
+export default function OrderList({ orders }: OrderListProps) {
 	const navigate = useNavigate()
-
-	const {
-		loading,
-		error,
-		data: ordersData
-	} = useQuery(GetOrdersWithPageInfoQuery, {
-		variables: {
-			take: pageSize,
-			skip: skip
-		}
-	})
-
-
 
 	const [columnDefs] = useState([
 		{
@@ -65,18 +47,6 @@ export default function OrderList({ pageSize, skip }: OrderListProps) {
 		}),
 		[]
 	)
-
-
-	if (loading) {
-		return <OmLoading />
-	}
-
-	if (error || !ordersData) {
-		return <OmAlert message='Could not load orders data' />
-	}
-
-	const orders = ordersData?.offsetOrders.items as Order[]
-
 
 	return (
 		<div className='ag-theme-alpine' style={{ height: 500, width: '100%' }}>

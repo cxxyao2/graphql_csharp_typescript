@@ -20,6 +20,7 @@
 		"@mui/x-date-pickers": "^7.11.1",
 		"ag-grid-community": "28.2.0",
 		"ag-grid-react": "28.2.0",
+		"axios": "^1.7.3",
 		"date-fns": "^3.6.0",
 		"dayjs": "^1.11.12",
 		"formik": "2.2.9",

@@ -1,10 +1,10 @@
 import { Grid, Typography } from '@mui/material'
-import OrderList from './OrderList'
 
 import TablePagination from '@mui/material/TablePagination'
 import { useState, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import { GetOrdersQuery } from '../../../graphql/queries/GetOrders'
+import OrderDashboardChild from './OrderDashboardChild'
 
 export default function OrdersDashboard() {
 	const [page, setPage] = useState(2)
@@ -52,7 +52,7 @@ export default function OrdersDashboard() {
 					rowsPerPage={rowsPerPage}
 					onRowsPerPageChange={handleChangeRowsPerPage}
 				/>
-				<OrderList pageSize={rowsPerPage} skip={rowsPerPage * page} />
+				<OrderDashboardChild pageSize={rowsPerPage} skip={rowsPerPage * page} />
 			</Grid>
 		</Grid>
 	)
