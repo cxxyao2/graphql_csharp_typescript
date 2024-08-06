@@ -31,11 +31,10 @@ const FORM_VALIDATION = yup.object().shape({
 	depositAmount: yup.number().required('Deposit amount is required'),
 	otherNotes: yup.string(),
 	totalAmount: yup.number().required('Deposit amount is required'),
-	status: yup
-		.string()
-		.oneOf(Object.values(Status), 'Invalid status value')
-		.required('Status is required')
+	status: yup.string().required('Status is required')
 })
+
+
 
 export default function OrderForm({ order }: OrderFormProps) {
 	const [open, setOpen] = useState(false)

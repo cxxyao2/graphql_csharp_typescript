@@ -1,8 +1,8 @@
 export enum Status {
-	Pending = 'Pending',
-	Draft = 'Draft',
-	Completed = 'Completed',
-	Shipped = 'Shipped'
+	PENDING = 'PENDING',
+	DRAFT = 'DRAFT',
+	COMPLETED = 'COMPLTED',
+	SHIPPED = 'SHIPPED'
 }
 
 export interface Address {
@@ -62,5 +62,5 @@ export type OrderModelInput = {
 	depositAmount: number
 	isDelivery: boolean
 	otherNotes: string
-	status: Status
+	status: Status | number
 }

@@ -2,7 +2,16 @@ import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import OmAlert from '../../components/elements/OmAlert'
 import OmLoading from '../../components/elements/OmLoading'
-import { Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid } from '@mui/material'
+import {
+	Button,
+	Container,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogContentText,
+	DialogTitle,
+	Grid
+} from '@mui/material'
 import OrderForm from './orderForm/OrderForm'
 import OmHeader from '../../components/elements/OmHeader'
 import { Delete } from '@mui/icons-material'
@@ -21,7 +30,7 @@ export default function OrderPage() {
 		data: orderData,
 		loading: orderLoading,
 		error: orderError
-	} = useQuery(GetOrderByIdQuery,{
+	} = useQuery(GetOrderByIdQuery, {
 		variables: {
 			id: orderId
 		}
@@ -44,14 +53,13 @@ export default function OrderPage() {
 		}
 	}
 
-		function handleClickOpen() {
-			setOpen(true)
-		}
-
-		function handleClose() {
-			setOpen(false)
+	function handleClickOpen() {
+		setOpen(true)
 	}
 
+	function handleClose() {
+		setOpen(false)
+	}
 
 	if (orderLoading || deleteOrderLoading) {
 		return <OmLoading />
@@ -61,9 +69,9 @@ export default function OrderPage() {
 		return <OmAlert message='Error retrieving order data' />
 	}
 
-		if (deleteOrderError) {
-			return <OmAlert message='Error deleting order data' />
-		}
+	if (deleteOrderError) {
+		return <OmAlert message='Error deleting order data' />
+	}
 
 	const order = orderData.orders.nodes[0] as Order
 	const customer = order.customer as Customer
@@ -94,7 +102,7 @@ export default function OrderPage() {
 				<Grid item xs={2}></Grid>
 				<Grid item xs={8}>
 					<OmHeader
-						header={`Order Details ${customer.firstName} ${customer.lastName}`}
+						header={`Order ${order.id} Details ${customer.firstName} ${customer.lastName}`}
 					/>
 				</Grid>
 				<Grid item xs={2}>

@@ -76,7 +76,7 @@ namespace GraphQlBackend.Services
 
         private async Task<TokenPair> GenerateTokens(User user)
         {
-            string? tokenSecret = _config.GetSection("Secrets:Token").Value;
+            string? tokenSecret = _config["AppSettings:Secrets_Token"];
             if (string.IsNullOrEmpty(tokenSecret))
             {
                 throw new Exception("Token secret is not set");
