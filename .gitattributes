@@ -1,0 +1,9 @@
+# Tell GitHub to ignore minified JavaScript files
+*.min.js linguist-vendored
+
+# Force GitHub to recognize certain files as a specific language
+*.tsx linguist-language=TypeScript
+*.jsx linguist-language=JavaScript
+
+# Ignore specific directories (like build artifacts)
+/build/* linguist-vendored
