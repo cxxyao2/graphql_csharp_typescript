@@ -21,6 +21,7 @@ export default function OrdersDashboard() {
 		event: React.MouseEvent<HTMLButtonElement> | null,
 		newPage: number
 	) => {
+		console.log(event)
 		setPage(newPage)
 	}
 

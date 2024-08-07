@@ -11,6 +11,8 @@ api.interceptors.request.use(
 		if (token) {
 			config.headers.Authorization = `Bearer ${token}`
 		}
+		config.headers['Content-Type'] = 'application/json'
+		config.headers['Access-Control-Allow-Origin'] = '*'
 		return config
 	},
 	(error) => {
@@ -32,6 +34,8 @@ api.interceptors.request.use(
 				localStorage.setItem('accessToken', accessToken)
 
 				originalRequest.headers.Authorization = `Bearer ${accessToken}`
+				originalRequest.headers['Content-Type'] = 'application/json'
+				originalRequest.headers['Access-Control-Allow-Origin'] = '*'
 				return api(originalRequest)
 			} catch (refreshError) {
 				console.error('Refresh token failed:', refreshError)
@@ -42,5 +46,4 @@ api.interceptors.request.use(
 	}
 )
 
-
-export default api;
+export default api

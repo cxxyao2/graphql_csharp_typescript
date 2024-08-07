@@ -2,7 +2,7 @@ import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 interface NavbarProps {
-	isLoggedIn: boolean
+	isLoggedIn?: boolean
 	userName?: string
 }
 
