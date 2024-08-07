@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\services\\authservice\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\services\\authservice\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\models\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\models\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\firebase-config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\firebase-config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\models\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\models\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\schema\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,10 +40,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/graphql_demo/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\schema\\mutation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,10 +94,6 @@
       "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\firebase-config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\firebase-config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|c:\\coding\\graphql_csharp_typescript\\graphqlbackend\\graphqlbackend\\graphqlbackend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{1E255BE8-5EA3-4D94-8012-9F394EB8D231}|GraphQlBackend\\GraphQlBackend.csproj|solutionrelative:graphqlbackend\\graphqlbackend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
@@ -137,7 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -157,56 +157,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Role.cs",
-              "RelativeDocumentMoniker": "GraphQlBackend\\Enums\\Role.cs",
-              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Role.cs",
-              "RelativeToolTip": "GraphQlBackend\\Enums\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T02:13:11.575Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\User.cs",
-              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\User.cs",
-              "RelativeToolTip": "GraphQlBackend\\Entities\\User.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAA1wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T04:05:03.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Program.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Program.cs",
               "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Program.cs",
               "RelativeToolTip": "GraphQlBackend\\Program.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAIAwwDwAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAIAwwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T20:03:51.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T20:03:51.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Status.cs",
-              "RelativeDocumentMoniker": "GraphQlBackend\\Enums\\Status.cs",
-              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Status.cs",
-              "RelativeToolTip": "GraphQlBackend\\Enums\\Status.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T20:44:24.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Mutation.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Schema\\Mutation.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Schema\\Mutation.cs",
@@ -218,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Query.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Schema\\Query.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Schema\\Query.cs",
@@ -230,15 +193,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\appsettings.json",
               "RelativeDocumentMoniker": "GraphQlBackend\\appsettings.json",
               "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\appsettings.json",
               "RelativeToolTip": "GraphQlBackend\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-31T21:18:08.485Z"
+              "WhenOpened": "2024-07-31T21:18:08.485Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -248,14 +212,14 @@
               "RelativeDocumentMoniker": "GraphQlBackend\\Services\\AuthService\\AuthService.cs",
               "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Services\\AuthService\\AuthService.cs",
               "RelativeToolTip": "GraphQlBackend\\Services\\AuthService\\AuthService.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAowGUAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-03T01:36:47.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "UserCreateDTO.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Models\\UserCreateDTO.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Models\\UserCreateDTO.cs",
@@ -263,12 +227,11 @@
               "RelativeToolTip": "GraphQlBackend\\Models\\UserCreateDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T01:51:48.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-03T01:51:48.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Data\\DataContext.cs",
@@ -280,7 +243,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 3,
+              "Title": "firebase-config.json",
+              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\firebase-config.json",
+              "RelativeDocumentMoniker": "GraphQlBackend\\firebase-config.json",
+              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\firebase-config.json",
+              "RelativeToolTip": "GraphQlBackend\\firebase-config.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-01T03:03:43.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Status.cs",
+              "RelativeDocumentMoniker": "GraphQlBackend\\Enums\\Status.cs",
+              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Status.cs",
+              "RelativeToolTip": "GraphQlBackend\\Enums\\Status.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T20:44:24.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\User.cs",
+              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\User.cs",
+              "RelativeToolTip": "GraphQlBackend\\Entities\\User.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T04:05:03.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\Order.cs",
@@ -292,7 +291,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "GraphQlBackend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "GraphQlBackend\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAASwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T01:36:31.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Role.cs",
+              "RelativeDocumentMoniker": "GraphQlBackend\\Enums\\Role.cs",
+              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Enums\\Role.cs",
+              "RelativeToolTip": "GraphQlBackend\\Enums\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T02:13:11.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/graphql_demo/True/SqlTable/dbo.Users.sql",
               "ToolTip": "dbo.Users [Data]",
@@ -301,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "PasswordHashingHelper.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Helpers\\PasswordHashingHelper.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Helpers\\PasswordHashingHelper.cs",
@@ -313,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "TokenCreatingHelper.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Helpers\\TokenCreatingHelper.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Helpers\\TokenCreatingHelper.cs",
@@ -325,19 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "GraphQlBackend\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "GraphQlBackend\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAIA1wBcAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T01:36:31.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\Customer.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\Customer.cs",
@@ -349,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UserUpdateDto.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Models\\UserUpdateDto.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Models\\UserUpdateDto.cs",
@@ -361,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Models\\RefreshToken.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Models\\RefreshToken.cs",
@@ -385,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "GraphQlBackend.csproj",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\GraphQlBackend.csproj",
               "RelativeDocumentMoniker": "GraphQlBackend\\GraphQlBackend.csproj",
@@ -409,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "GraphQlBackend\\Properties\\launchSettings.json",
@@ -456,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Entities\\Address.cs",
               "RelativeDocumentMoniker": "GraphQlBackend\\Entities\\Address.cs",
@@ -480,19 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "firebase-config.json",
-              "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\firebase-config.json",
-              "RelativeDocumentMoniker": "GraphQlBackend\\firebase-config.json",
-              "ToolTip": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\firebase-config.json",
-              "RelativeToolTip": "GraphQlBackend\\firebase-config.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-01T03:03:43.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\coding\\graphql_csharp_typescript\\GraphQlBackend\\GraphQlBackend\\Dockerfile",
               "RelativeDocumentMoniker": "GraphQlBackend\\Dockerfile",

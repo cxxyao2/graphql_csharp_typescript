@@ -61,7 +61,7 @@ namespace GraphQlBackend.Services
 
             user.UserName = model.UserName;
             user.Birthday = model.Birthday;
-            user.Role = model.Role?? Role.User;
+            user.Role = model.Role ?? Role.User;
 
             user.Email = model.Email;
             user.CreatedAt = DateTime.UtcNow;
@@ -76,7 +76,7 @@ namespace GraphQlBackend.Services
 
         private async Task<TokenPair> GenerateTokens(User user)
         {
-            string? tokenSecret = _config["AppSettings:Secrets_Token"];
+            string? tokenSecret = _config["Secrets_Token"];
             if (string.IsNullOrEmpty(tokenSecret))
             {
                 throw new Exception("Token secret is not set");

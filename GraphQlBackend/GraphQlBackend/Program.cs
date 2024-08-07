@@ -1,3 +1,4 @@
+using System.Security.Principal;
 using System.Text;
 using GraphQlBackend.Data;
 using GraphQlBackend.Schema;
@@ -24,7 +25,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                    {
                        ValidateIssuerSigningKey = true,
                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.
-                           GetBytes(builder.Configuration["AppSettings:Secrets_Token"] ?? "")),
+                           GetBytes(builder.Configuration["Secrets_Token"] ?? "")),
                        ValidateIssuer = false,
                        ValidateAudience = false,
                    };
@@ -36,6 +37,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -43,9 +46,9 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 
 
 // Cors
-// Read the CORS origins from environment variables
-var originsString = builder.Configuration["AppSettings:Cors_AllowedOrigins"];
-var allowedOrigins = originsString?.Split(',');
+// Read the CORS origins from environment variables  Cors_AllowedOrigins
+var originsString = builder.Configuration.GetValue<string>("WEBSITE_CORS_ALLOWED_ORIGINS");
+ var allowedOrigins = originsString?.Split(',');
 
 builder.Services.AddCors(options =>
 {
